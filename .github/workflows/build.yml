@@ -16,7 +16,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-
       - name: Build container image
         uses: redhat-actions/buildah-build@v2
         with:
@@ -25,7 +24,6 @@ jobs:
           image: ${{ env.IMAGE_NAME }}
           layers: false
           oci: true
-
       - name: Push to ghcr.io
         uses: redhat-actions/push-to-registry@v2.6
         with:
