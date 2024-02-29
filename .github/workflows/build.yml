@@ -2,11 +2,10 @@ name: Build
 on:
   push:
     branches: ["main"]
-
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: "python-microservice"
-  IMAGE_REGISTRY: ghcr.io/maurille2020
+  IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
   REGISTRY_USER: ${{ github.actor }}
   REGISTRY_PASSWORD: ${{ github.token }}
 jobs:
