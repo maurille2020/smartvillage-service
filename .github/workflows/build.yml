@@ -9,7 +9,6 @@ env:
   IMAGE_REGISTRY: ghcr.io/maurille2020
   REGISTRY_USER: ${{ github.actor }}
   REGISTRY_PASSWORD: ${{ github.token }}
-      
 jobs:
   podman-build:
     runs-on: ubuntu-latest
